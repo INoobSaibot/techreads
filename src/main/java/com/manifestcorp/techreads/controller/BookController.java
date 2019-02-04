@@ -20,8 +20,8 @@ public class BookController {
 	@RequestMapping({"","/"})
 	public ModelAndView books() {
 		ModelAndView mav = new ModelAndView("books");
-		List<Book> books = bookRepository.findAll();
-		mav.addObject("books", books);
+		//List<Book> books = bookRepository.findAll();
+		//mav.addObject("books", books);
 		return mav;
 	}	
 }

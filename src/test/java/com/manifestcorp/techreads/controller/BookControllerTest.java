@@ -1,6 +1,12 @@
 package com.manifestcorp.techreads.controller;
 
+import org.junit.Test;
+
 public class BookControllerTest {
 	
-	// only has constructor, we dont test constructors
+	@Test
+	public void booksTest() {
+		
+	}
+	
 }
