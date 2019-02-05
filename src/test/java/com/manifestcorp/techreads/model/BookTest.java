@@ -2,10 +2,10 @@ package com.manifestcorp.techreads.model;
 
 import static org.junit.Assert.assertEquals;
 
-import org.hibernate.engine.spi.Status;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 
 public class BookTest {
 	
@@ -66,9 +66,9 @@ public class BookTest {
 	
 	@Test
 	public void testStatus() throws Exception {
-		Status status = Status.READ;
+		BookStatus status = BookStatus.WANT_TO_READ;
 		book.setStatus(status);
 		
-		assertEquals(status, book.getRating());
+		assertEquals(status, book.getStatus());
 	}
 }

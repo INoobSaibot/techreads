@@ -1,6 +1,6 @@
 package com.manifestcorp.techreads.model;
 
-public enum Status {
+public enum BookStatus {
 	
 	Read (0),
 	CURRENTLY_READING (1),
@@ -8,7 +8,7 @@ public enum Status {
 	
 	final int value; 
 	
-	Status(int value) {
+	BookStatus(int value) {
 		this.value = value;
 	}
 	

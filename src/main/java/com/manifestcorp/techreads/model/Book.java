@@ -14,6 +14,7 @@ public class Book {
 	String title;
 	String author;
 	Rating rating;
+	BookStatus bookStatus;
 	
 	public Book() {}
 	
@@ -36,4 +37,8 @@ public class Book {
 	public void setRating(Rating rating) { this.rating = (rating); }
 	
 	public Rating getRating() { return this.rating; }
+
+	public void setStatus(BookStatus status) { this.bookStatus = status; }
+
+	public BookStatus getStatus() { return this.bookStatus; }
 }
