@@ -3,8 +3,6 @@ package com.manifestcorp.techreads;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.After;
 import static org.easymock.EasyMock.*;
 import com.manifestcorp.techreads.model.Book;

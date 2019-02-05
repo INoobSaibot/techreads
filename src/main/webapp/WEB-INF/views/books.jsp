@@ -20,6 +20,7 @@ li {list-style: none;}
                         <br>
                         <c:out value="${book.author}" />
                         <br>
+                        Rating: <c:out value="${book.rating}" />"
                     </li>
                 </c:forEach>
             </ul>

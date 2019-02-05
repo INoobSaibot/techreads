@@ -13,6 +13,7 @@
             <br>
             Author:
             <form:input path="author" type="text" />
+            Rating: <form:radio path="rating" type="" />
             <button type="submit">Add</button>
     </form:form>
     </body>

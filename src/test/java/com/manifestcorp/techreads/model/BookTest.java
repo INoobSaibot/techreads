@@ -55,4 +55,12 @@ public class BookTest {
 	public void testGetAuthor() throws Exception {
 		assertEquals(book.author, book.getAuthor());
 	}
+	
+	@Test
+	public void testGetRating() throws Exception {
+		Rating rating = Rating.GOTTA_HAVE_IT;
+		book.setRating(rating);
+		
+		assertEquals(rating, book.getRating());
+	}
 }
