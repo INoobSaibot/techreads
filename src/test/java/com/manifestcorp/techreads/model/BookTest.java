@@ -12,18 +12,18 @@ public class BookTest {
 	public Book book;
 	
 	@Before
-	public void before() {
+	public void before() throws Exception{
 		String title = "Rock and Morty";
 		book = new Book(title);
 	}
 
 	@After
-	public void after() {
+	public void after() throws Exception {
 		book = null;
 	}
 	
 	@Test
-		public void setIdTest() {
+		public void testSetId() throws Exception {
 		Long longId = 1234567891234567l;
 		book.setId(longId);
 		
@@ -31,12 +31,12 @@ public class BookTest {
 	}
 	
 	@Test
-	public void getTitleTest() {
+	public void testGetTitle() throws Exception {
 		assertEquals(book.title, book.getTitle());
 	}
 	
 	@Test
-	public void setTitleTest() {
+	public void testSetTitle() throws Exception {
 		String title = "Head first into Java";
 		book.setTitle(title);
 		
@@ -44,7 +44,7 @@ public class BookTest {
 	}
 	
 	@Test
-	public void setAuthorTest() {
+	public void testSetAuthor() throws Exception {
 		String author = "Bruce Eckle";
 		book.setAuthor(author);
 		
@@ -52,7 +52,7 @@ public class BookTest {
 	}
 	
 	@Test
-	public void getAuthorTest() {
+	public void testGetAuthor() throws Exception {
 		assertEquals(book.author, book.getAuthor());
 	}
 }

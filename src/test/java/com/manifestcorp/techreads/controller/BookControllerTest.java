@@ -26,7 +26,7 @@ public class BookControllerTest {
 	
 	
 	@Test
-	public void booksTest() {
+	public void testBooks() throws Exception {
 		//assertEquals(null, controller.books());
 		
 		expect(mockBookRepo.findAll()).andReturn(null);

@@ -22,7 +22,7 @@ public class BookController {
 	BookRepository bookRepository;
 	
 	@RequestMapping({"","/"})
-	public ModelAndView books() {
+	public ModelAndView books() throws Exception {
 		ModelAndView mav = new ModelAndView("books");
 		List<Book> books = bookRepository.findAll();
 		mav.addObject("books", books);
@@ -30,13 +30,13 @@ public class BookController {
 	}
 	
 	@RequestMapping("/add")
-	public String add (Model model) {
+	public String add (Model model) throws Exception {
 		model.addAttribute("bookForm", new Book());
 		return "add";
 	}
 	
 	@RequestMapping(value = {"", "/"}, method=POST)
-	public RedirectView addBook(Book book) {
+	public RedirectView addBook(Book book) throws Exception {
 		bookRepository.saveAndFlush(book);
 		return new RedirectView("books");
 	}

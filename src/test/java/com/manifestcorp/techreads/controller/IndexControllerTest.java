@@ -11,12 +11,12 @@ public class IndexControllerTest {
 	RedirectView view = new RedirectView("books");
 	
 	@Test
-		public void indexTest() {
+		public void testIndex() throws Exception {
 		//assertEquals(controller.index(), view);
 	}
 	
 	@Test
-	public void servicesTest() {
+	public void testServices() throws Exception {
 		assertEquals(controller.services(), "Services home page!");
 	}
 }

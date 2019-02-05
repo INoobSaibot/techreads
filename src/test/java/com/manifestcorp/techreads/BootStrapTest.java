@@ -3,6 +3,8 @@ package com.manifestcorp.techreads;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import static org.easymock.EasyMock.*;
 import com.manifestcorp.techreads.model.Book;
@@ -17,19 +19,19 @@ public class BootStrapTest {
 	private final static Book BOOK = new Book(PARAMS);
 	
 	@Before
-	public void before() {
+	public void before() throws Exception {
 		bootStrap = new BootStrap();
 		mockRepo = createNiceMock(BookRepository.class);
 		bootStrap.bookRepository = mockRepo;
 	}
 	
 	@After
-	public void after() {
+	public void after() throws Exception {
 		//verify(mockRepo);
 	}
 	
 	@Test
-	public void testNoBooks() {
+	public void testNoBooks() throws Exception {
 		expect(mockRepo.count()).andReturn(LOW_RECORD_COUNT);
 		//fails
 			//Unexpected method call BookRepository.save(com.manifestcorp.techreads.model.Book@22635ba0):
