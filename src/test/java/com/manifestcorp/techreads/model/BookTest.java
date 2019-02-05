@@ -42,4 +42,17 @@ public class BookTest {
 		
 		assertEquals(title, book.getTitle());
 	}
+	
+	@Test
+	public void setAuthorTest() {
+		String author = "Bruce Eckle";
+		book.setAuthor(author);
+		
+		assertEquals(author, book.getAuthor());
+	}
+	
+	@Test
+	public void getAuthorTest() {
+		assertEquals(book.author, book.getAuthor());
+	}
 }
