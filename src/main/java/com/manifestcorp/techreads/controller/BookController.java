@@ -26,6 +26,7 @@ public class BookController {
 		ModelAndView mav = new ModelAndView("books");
 		List<Book> books = bookRepository.findAll();
 		mav.addObject("books", books);
+		mav.addObject("bookForm", new Book());
 		return mav;
 	}
 	

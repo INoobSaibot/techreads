@@ -67,8 +67,8 @@ public class BookTest {
 	@Test
 	public void testStatus() throws Exception {
 		BookStatus status = BookStatus.WANT_TO_READ;
-		book.setStatus(status);
+		book.setBookStatus(status);
 		
-		assertEquals(status, book.getStatus());
+		assertEquals(status, book.getBookStatus());
 	}
 }

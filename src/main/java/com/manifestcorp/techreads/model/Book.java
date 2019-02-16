@@ -38,7 +38,7 @@ public class Book {
 	
 	public Rating getRating() { return this.rating; }
 
-	public void setStatus(BookStatus status) { this.bookStatus = status; }
+	public void setBookStatus(BookStatus status) { this.bookStatus = status; }
 
-	public BookStatus getStatus() { return this.bookStatus; }
+	public BookStatus getBookStatus() { return this.bookStatus; }
 }

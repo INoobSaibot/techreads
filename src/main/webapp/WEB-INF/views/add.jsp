@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <style>
 li {list-style: none;}
 </style>
@@ -16,6 +18,10 @@ li {list-style: none;}
                     <form:input path="title" type="text" /></li>
                 <li>Author: <form:input path="author" type="text" /></li>
                 <li>Rating: <form:radiobuttons path="rating" /></li>
+                <form:select path="bookStatus">
+                    <form:option value="0" label="Select" />
+                    <form:options items="${bookStatus}" />
+                </form:select>
                 <button type="submit">Add</button>
             </ul>
     </form:form>
