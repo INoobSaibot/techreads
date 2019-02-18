@@ -20,36 +20,31 @@ li {list-style: none;}
 
 <html>
     <body>
-        <h1>Books</h1>
-        <a href="<c:url value='/books/add' />" class="btn btn-primary">Add Books</a>
+        <h1>Book details</h1>
 
-        <c:if test="${not empty books}">
+        ${details.title}
+        
+        <c:if test="${not empty details}">
             <ul>
                 <div class="book">
-                    <c:forEach var="book" items="${books}">
+
                             <div class="card" style="width: 18rem;">
                                     <img class="card-img-top" src="..." alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title"><c:out value="${book.title}" /></h5>
+                                        <h5 class="card-title"><c:out value="${details.title}" /></h5>
                                         <p class="card-text">
                                             <ul>
-                                                <li>Author:<c:out value="${book.author}" /></li>
-                                                <li>Rating: <c:out value="${book.rating}" /></li>
+                                                <li>Author:<c:out value="${details.author}" /></li>
+                                                <li>Rating: <c:out value="${details.rating}" /></li>
                                             </ul>
-                                        </p>
-                                        <form:form method="post" modelAttribute="bookForm" action="${pageContext.request.contextPath}/books">
-                                            <form:select path="bookStatus">
-                                                <form:option value="0" label="Select" />
-                                                <form:options items="${bookStatus}" />
-                                            </form:select>
-                                            <button type="submit">Edit</button>
-                                        </form:form>
-                                        <a href="/books/details?book=${book.id}" class="btn btn-primary">Details</a>
-                                        
+                                       
+                                            <a href="/books/edit${details.id}" class="btn btn-primary">Edit This Book</a>
+
+       
                                     </div>
                                 </div>
                             <hr>
-                    </c:forEach>
+                 
                 </div>
             </ul>
         </c:if>
